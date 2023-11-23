@@ -7,3 +7,12 @@ body{
 main{
   flex-grow: 1;
 }
+
+
+
+/* ----- FLECHAS DE INPUT ----- */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
