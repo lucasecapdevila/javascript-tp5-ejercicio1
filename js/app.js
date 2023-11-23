@@ -1,11 +1,15 @@
 const numAleatorio = Math.floor(Math.random() * 10) + 1
-const btnEmpezar = document.querySelector('.btn-danger')
+const btnEmpezar = document.querySelector('.btn-success')
 
 const empezarJuego = () =>{
-  const p = document.createElement('p')
-  p.classList.add('lead', 'my-2')
-  p.innerText = `El juego empezó ! Debe adivinar el número aleatorio que se generó entre el 1 y el 10`
-  btnEmpezar.insertAdjacentElement("afterend", p)
+  if(btnEmpezar.innerText === 'Comenzar el juego'){
+    const p = document.createElement('p')
+    p.classList.add('lead', 'my-2')
+    p.innerText = `El juego empezó ! Debe adivinar el número aleatorio que se generó entre el 1 y el 10`
+    btnEmpezar.insertAdjacentElement("afterend", p)
+    btnEmpezar.innerText = 'El juego empezó'
+    btnEmpezar.className = 'btn btn-danger'
+  } 
 }
 
 const coincidenNumeros = () =>{
