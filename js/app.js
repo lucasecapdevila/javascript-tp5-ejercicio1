@@ -1,4 +1,5 @@
 const numAleatorio = Math.floor(Math.random() * 10) + 1
+const input = document.getElementById('numUsuario')
 const btnEmpezar = document.querySelector('.btn-success')
 
 const empezarJuego = () =>{
@@ -16,8 +17,10 @@ const coincidenNumeros = () =>{
   let numUsuario = document.getElementById('numUsuario')
   if(numAleatorio > numUsuario.value){
     alert('El número aleatorio es mayor al que usted ingresó');
+    input.value = ''
   } else if(numAleatorio < numUsuario.value){
     alert('El número aleatorio es menor al que usted ingresó');
+    input.value = ''
   } else{
     alert('Acertaste el número secreto !');
   }
